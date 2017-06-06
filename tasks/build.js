@@ -6,12 +6,7 @@ rollup.rollup({
   entry: 'src/main.js', 
   plugins: [buble()]
 }).then(function(bundle) {
-
-  //const result = bundle.generate({
-  //  format: 'iife'
-  //});
  
- //fs.writeFileSync('dist/bundle.js', result.code)
   bundle.write({
    format: 'iife',
    dest: 'dist/bundle.js' 
